@@ -13,6 +13,20 @@
 		79529CD526A2CFF700AB7DE9 /* TheFepiTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529CD426A2CFF700AB7DE9 /* TheFepiTestTests.swift */; };
 		79529CE026A2CFF700AB7DE9 /* TheFepiTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529CDF26A2CFF700AB7DE9 /* TheFepiTestUITests.swift */; };
 		79529D1126A2D8A400AB7DE9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D1026A2D8A400AB7DE9 /* MainViewController.swift */; };
+		79529D1926A344A900AB7DE9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D1826A344A900AB7DE9 /* MainViewModel.swift */; };
+		79529D1E26A344C900AB7DE9 /* MainViewContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D1D26A344C900AB7DE9 /* MainViewContract.swift */; };
+		79529D2526A36DD600AB7DE9 /* FTSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D2426A36DD600AB7DE9 /* FTSearchBarView.swift */; };
+		79529D2E26A3769F00AB7DE9 /* UISearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D2D26A3769F00AB7DE9 /* UISearchBarExtension.swift */; };
+		79529D3626A37AE500AB7DE9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D3526A37AE500AB7DE9 /* UIColorExtension.swift */; };
+		79529D3B26A4281300AB7DE9 /* FTTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D3A26A4281300AB7DE9 /* FTTabBarView.swift */; };
+		79529D4026A478E300AB7DE9 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D3F26A478E300AB7DE9 /* SearchResultViewController.swift */; };
+		79529D4826A4792E00AB7DE9 /* SearchResultContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D4726A4792E00AB7DE9 /* SearchResultContract.swift */; };
+		79529D4D26A4793D00AB7DE9 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D4C26A4793D00AB7DE9 /* SearchResultViewModel.swift */; };
+		79529D5226A47D8700AB7DE9 /* SearchResultDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D5126A47D8700AB7DE9 /* SearchResultDataSource.swift */; };
+		79529D5726A47EAE00AB7DE9 /* FTCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D5626A47EAE00AB7DE9 /* FTCardViewCell.swift */; };
+		79529D5D26A4B72500AB7DE9 /* FTNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D5C26A4B72500AB7DE9 /* FTNetworkManager.swift */; };
+		79529D6626A4BA5400AB7DE9 /* GithubIssueApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D6526A4BA5400AB7DE9 /* GithubIssueApiModel.swift */; };
+		79529D7626A4E8ED00AB7DE9 /* GithubRepoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79529D7526A4E8ED00AB7DE9 /* GithubRepoApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +59,20 @@
 		79529CDF26A2CFF700AB7DE9 /* TheFepiTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFepiTestUITests.swift; sourceTree = "<group>"; };
 		79529CE126A2CFF700AB7DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79529D1026A2D8A400AB7DE9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		79529D1826A344A900AB7DE9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		79529D1D26A344C900AB7DE9 /* MainViewContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContract.swift; sourceTree = "<group>"; };
+		79529D2426A36DD600AB7DE9 /* FTSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTSearchBarView.swift; sourceTree = "<group>"; };
+		79529D2D26A3769F00AB7DE9 /* UISearchBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarExtension.swift; sourceTree = "<group>"; };
+		79529D3526A37AE500AB7DE9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		79529D3A26A4281300AB7DE9 /* FTTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTTabBarView.swift; sourceTree = "<group>"; };
+		79529D3F26A478E300AB7DE9 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		79529D4726A4792E00AB7DE9 /* SearchResultContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultContract.swift; sourceTree = "<group>"; };
+		79529D4C26A4793D00AB7DE9 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		79529D5126A47D8700AB7DE9 /* SearchResultDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDataSource.swift; sourceTree = "<group>"; };
+		79529D5626A47EAE00AB7DE9 /* FTCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCardViewCell.swift; sourceTree = "<group>"; };
+		79529D5C26A4B72500AB7DE9 /* FTNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTNetworkManager.swift; sourceTree = "<group>"; };
+		79529D6526A4BA5400AB7DE9 /* GithubIssueApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubIssueApiModel.swift; sourceTree = "<group>"; };
+		79529D7526A4E8ED00AB7DE9 /* GithubRepoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRepoApiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +123,9 @@
 		79529CBC26A2CFF600AB7DE9 /* TheFepiTest */ = {
 			isa = PBXGroup;
 			children = (
+				79529D2226A36D7300AB7DE9 /* Common */,
 				79529D0126A2D67900AB7DE9 /* Main */,
-				79529CFA26A2D61500AB7DE9 /* RepoSearchResult */,
-				79529CF926A2D5C800AB7DE9 /* IssueSearchResult */,
+				79529CFA26A2D61500AB7DE9 /* SearchResult */,
 				79529CBD26A2CFF600AB7DE9 /* AppDelegate.swift */,
 				79529CBF26A2CFF600AB7DE9 /* SceneDelegate.swift */,
 				79529CC626A2CFF700AB7DE9 /* Assets.xcassets */,
@@ -124,26 +152,72 @@
 			path = TheFepiTestUITests;
 			sourceTree = "<group>";
 		};
-		79529CF926A2D5C800AB7DE9 /* IssueSearchResult */ = {
+		79529CFA26A2D61500AB7DE9 /* SearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				79529D3F26A478E300AB7DE9 /* SearchResultViewController.swift */,
+				79529D4726A4792E00AB7DE9 /* SearchResultContract.swift */,
+				79529D4C26A4793D00AB7DE9 /* SearchResultViewModel.swift */,
+				79529D5126A47D8700AB7DE9 /* SearchResultDataSource.swift */,
 			);
-			path = IssueSearchResult;
-			sourceTree = "<group>";
-		};
-		79529CFA26A2D61500AB7DE9 /* RepoSearchResult */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = RepoSearchResult;
+			path = SearchResult;
 			sourceTree = "<group>";
 		};
 		79529D0126A2D67900AB7DE9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				79529D6426A4BA0D00AB7DE9 /* Model */,
 				79529D1026A2D8A400AB7DE9 /* MainViewController.swift */,
+				79529D1826A344A900AB7DE9 /* MainViewModel.swift */,
+				79529D1D26A344C900AB7DE9 /* MainViewContract.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		79529D2226A36D7300AB7DE9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				79529D5B26A4B63A00AB7DE9 /* Helper */,
+				79529D2C26A3767D00AB7DE9 /* Extension */,
+				79529D2326A36D8400AB7DE9 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		79529D2326A36D8400AB7DE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79529D2426A36DD600AB7DE9 /* FTSearchBarView.swift */,
+				79529D3A26A4281300AB7DE9 /* FTTabBarView.swift */,
+				79529D5626A47EAE00AB7DE9 /* FTCardViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79529D2C26A3767D00AB7DE9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				79529D2D26A3769F00AB7DE9 /* UISearchBarExtension.swift */,
+				79529D3526A37AE500AB7DE9 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		79529D5B26A4B63A00AB7DE9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				79529D5C26A4B72500AB7DE9 /* FTNetworkManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		79529D6426A4BA0D00AB7DE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79529D6526A4BA5400AB7DE9 /* GithubIssueApiModel.swift */,
+				79529D7526A4E8ED00AB7DE9 /* GithubRepoApiModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +348,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79529D5726A47EAE00AB7DE9 /* FTCardViewCell.swift in Sources */,
+				79529D2526A36DD600AB7DE9 /* FTSearchBarView.swift in Sources */,
 				79529D1126A2D8A400AB7DE9 /* MainViewController.swift in Sources */,
+				79529D4026A478E300AB7DE9 /* SearchResultViewController.swift in Sources */,
 				79529CBE26A2CFF600AB7DE9 /* AppDelegate.swift in Sources */,
+				79529D3626A37AE500AB7DE9 /* UIColorExtension.swift in Sources */,
+				79529D1E26A344C900AB7DE9 /* MainViewContract.swift in Sources */,
+				79529D6626A4BA5400AB7DE9 /* GithubIssueApiModel.swift in Sources */,
+				79529D7626A4E8ED00AB7DE9 /* GithubRepoApiModel.swift in Sources */,
 				79529CC026A2CFF600AB7DE9 /* SceneDelegate.swift in Sources */,
+				79529D5D26A4B72500AB7DE9 /* FTNetworkManager.swift in Sources */,
+				79529D4D26A4793D00AB7DE9 /* SearchResultViewModel.swift in Sources */,
+				79529D5226A47D8700AB7DE9 /* SearchResultDataSource.swift in Sources */,
+				79529D4826A4792E00AB7DE9 /* SearchResultContract.swift in Sources */,
+				79529D1926A344A900AB7DE9 /* MainViewModel.swift in Sources */,
+				79529D3B26A4281300AB7DE9 /* FTTabBarView.swift in Sources */,
+				79529D2E26A3769F00AB7DE9 /* UISearchBarExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

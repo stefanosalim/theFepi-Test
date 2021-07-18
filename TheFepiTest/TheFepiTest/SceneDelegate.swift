@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = MainViewController()
+        let viewController = getMainViewController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
@@ -52,7 +52,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    func getMainViewController() -> UIViewController {
+        let mainViewModel: MainViewModel = MainViewModel()
+        let mainViewController: MainViewController = MainViewController(with: mainViewModel)
+        
+        return mainViewController
+    }
 }
 

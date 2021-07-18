@@ -117,7 +117,7 @@ private extension FTTabBarView {
         titleLabel.isUserInteractionEnabled = true
         titleLabel.text = title;
         titleLabel.tag = index
-        titleLabel.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 36.0).isActive = true
         
         return titleLabel
     }
