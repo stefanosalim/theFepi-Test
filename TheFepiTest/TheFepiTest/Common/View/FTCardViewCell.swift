@@ -98,6 +98,7 @@ class FTCardViewCell: UICollectionViewCell {
         
         for arrangedSubview in rightContentStackView.arrangedSubviews {
             rightContentStackView.removeArrangedSubview(arrangedSubview)
+            arrangedSubview.removeFromSuperview()
         }
     }
 }

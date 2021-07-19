@@ -15,6 +15,8 @@ protocol SearchResultViewModelProtocol: AnyObject {
     var action: SearchResultViewModelAction? {get set}
     
     func onLoad()
+    
+    func onReachingEndOfList()
 }
 
 

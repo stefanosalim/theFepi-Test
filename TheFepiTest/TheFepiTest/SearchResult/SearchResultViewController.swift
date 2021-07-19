@@ -9,7 +9,7 @@ import UIKit
 
 class SearchResultViewController: UIViewController {
 
-    public var viewModel: SearchResultViewModelProtocol
+    var viewModel: SearchResultViewModelProtocol
     
     lazy var collectionView: UICollectionView = {
         let collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -77,6 +77,14 @@ extension SearchResultViewController: UICollectionViewDelegateFlowLayout {
         
         let size: CGSize = CGSize(width: UIScreen.main.bounds.width - 32.0, height: FTCardViewCell.getHeight())
         return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath.item == collectionView.numberOfItems(inSection: indexPath.section) - 1 {
+            
+            viewModel.onReachingEndOfList()
+        }
     }
 }
 

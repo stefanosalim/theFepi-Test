@@ -43,7 +43,6 @@ class MainViewController: UIViewController {
     lazy var contentView: UIView = {
         let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
         
         return view
     }()
@@ -152,13 +151,6 @@ extension MainViewController: MainViewModelAction {
         tabBarView.setupView(with: model)
     }
     
-    func setupIssuesContent(with viewModel: SearchResultViewModel) {
-        
-        issuesViewController = SearchResultViewController(with: viewModel)
-        guard let issuesViewController = issuesViewController else { return }
-        issuesViewController.collectionView.reloadData()
-    }
-    
     func setupListContent(for activeIndex: Int, viewModel: SearchResultViewModel) {
         var selectedViewController = getListViewController(by: activeIndex)
         remove(selectedViewController)
@@ -197,6 +189,11 @@ extension MainViewController: MainViewModelAction {
         }
         
         return listView.window != nil
+    }
+    
+    func reloadList(for index:Int) {
+        guard let listViewController = getListViewController(by: index) else { return }
+        listViewController.collectionView.reloadData()
     }
 }
 

@@ -12,6 +12,12 @@ class MainViewModel {
     
     var activeIndex: Int = 0
     
+    var issuePage: Int = 1
+    var repoPage: Int = 1
+    
+    var lastIssueQuery: String = ""
+    var lastRepoQuery: String = ""
+    
     lazy var activeChildViewModel: SearchResultViewModel = {
         return activeIndex == 0 ? issuesViewModel : reposViewModel
     }()
@@ -19,12 +25,14 @@ class MainViewModel {
     lazy var issuesViewModel: SearchResultViewModel = {
     
         let viewModel: SearchResultViewModel = SearchResultViewModel(with: SearchResultDataSource())
+        viewModel.delegate = self
         return viewModel
     }()
     
     lazy var reposViewModel: SearchResultViewModel = {
     
         let viewModel: SearchResultViewModel = SearchResultViewModel(with: SearchResultDataSource())
+        viewModel.delegate = self
         return viewModel
     }()
 }
@@ -43,7 +51,7 @@ private extension MainViewModel {
         action?.setupListContent(for: activeIndex, viewModel: activeChildViewModel)
     }
     
-    func handleIssueResponse(response: GithubIsseResponse) {
+    func handleIssueResponse(response: GithubIssueResponse) {
         
         var issueListModel:[FTCardViewCellModel] = []
         for item in response.items {
@@ -54,16 +62,28 @@ private extension MainViewModel {
         setupListContent(with: issueListModel)
     }
     
+    func appendIssueResponse(response: GithubIssueResponse) {
+        
+        var issueListModel:[FTCardViewCellModel] = []
+        for item in response.items {
+            let issueCellModel: FTCardViewCellModel = getIssue(from: item)
+            issueListModel.append(issueCellModel)
+        }
+        
+        activeChildViewModel.dataSource.cellModels.append(contentsOf: issueListModel)
+        action?.reloadList(for: activeIndex)
+    }
+    
     func fetchIssue(query:String, page:Int) {
         
         let spec: GithubIssueSpec = GithubIssueSpec(query: query, page: page, perPage: 10)
-        fetchIssues(spec: spec) { [weak self] (response: GithubIsseResponse) in
+        fetchIssues(spec: spec) { [weak self] (response: GithubIssueResponse) in
             
             self?.handleIssueResponse(response: response)
         }
     }
     
-    func fetchIssues(spec:GithubIssueSpec, completion: @escaping (GithubIsseResponse) -> ()) {
+    func fetchIssues(spec:GithubIssueSpec, completion: @escaping (GithubIssueResponse) -> ()) {
         
         let urlString: String = String(format: "https://api.github.com/search/issues?q=%@&page=%ld&per_page=%ld", spec.query, spec.page, spec.perPage)
         FTNetworkManager.shared.fetch(urlString: urlString, completion: completion)
@@ -89,6 +109,18 @@ private extension MainViewModel {
         }
         
         setupListContent(with: issueListModel)
+    }
+    
+    func appendRepoResponse(response: GithubRepoResponse) {
+        
+        var repoListModel:[FTCardViewCellModel] = []
+        for item in response.items {
+            let repoCellModel: FTCardViewCellModel = getRepo(from: item)
+            repoListModel.append(repoCellModel)
+        }
+        
+        activeChildViewModel.dataSource.cellModels.append(contentsOf: repoListModel)
+        action?.reloadList(for: activeIndex)
     }
     
     func fetchRepos(query:String, page:Int) {
@@ -132,11 +164,15 @@ extension MainViewModel: MainViewModelProtocol {
         
         if activeIndex == 0 {
             
-            fetchIssue(query: query, page: 1)
+            issuePage = 1
+            fetchIssue(query: query, page: issuePage)
+            lastIssueQuery = query
         }
         else {
             
-            fetchRepos(query: query, page: 1)
+            repoPage = 1
+            fetchRepos(query: query, page: repoPage)
+            lastRepoQuery = query
         }
     }
     
@@ -151,6 +187,26 @@ extension MainViewModel: MainViewModelProtocol {
         else {
             
             action?.setActiveReposList()
+        }
+    }
+}
+
+extension MainViewModel: SearchResultViewModelDelegate {
+    
+    func searchResultReachingEndOfList() {
+        
+        if activeIndex == 0 {
+            issuePage += 1
+            fetchIssues(spec: GithubIssueSpec(query: lastIssueQuery, page: issuePage, perPage: 10)) { [weak self] (response: GithubIssueResponse) in
+                self?.appendIssueResponse(response: response)
+            }
+        }
+        else {
+            repoPage += 1
+            fetchRepos(spec: GithubRepoSpec(query: lastRepoQuery, page: repoPage, perPage: 10)) { [weak self] (response: GithubRepoResponse) in
+                
+                self?.appendRepoResponse(response: response)
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ struct GithubIssueSpec {
     var perPage: Int
 }
 
-struct GithubIsseResponse: Decodable {
+struct GithubIssueResponse: Decodable {
     var items: [GithubIssueItem]
 }
 
